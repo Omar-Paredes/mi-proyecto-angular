@@ -87,13 +87,29 @@ import { TitleComponent } from '@shared/title/title.component';
 
 
     @defer(on timer(2000)){
-    <app-heavy-loaders-fast cssClass="bg-blue-500 h-20">
-    <span>On Interaction</span>
+    <app-heavy-loaders-fast cssClass="bg-green-500 h-20">
+    <span>On Timer</span>
 
     </app-heavy-loaders-fast>
 
     }@placeholder {
-<div class="w-full h-20 bg-purple-100"> Click en el div</div>
+<div class="w-full h-20 bg-purple-100"> 2 seg</div>
+
+    }
+  </section>
+
+  <section>
+    <hr class="my-2">
+
+
+    @defer(on hover; prefetch on idle){
+    <app-heavy-loaders-fast cssClass="bg-green-500 h-20">
+    <span>On hover, idle</span>
+
+    </app-heavy-loaders-fast>
+
+    }@placeholder {
+<div class="w-full h-20 bg-purple-100"> Hover</div>
 
     }
   </section>

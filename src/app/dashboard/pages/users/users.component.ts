@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { UserService } from '@services/users.service';
 
 @Component({
   selector: 'app-users',
@@ -15,4 +16,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class UsersComponent { }
+export default class UsersComponent {
+
+
+public UserService = inject(UserService)
+
+
+}
